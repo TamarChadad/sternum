@@ -28,7 +28,7 @@ class LicensePlatesIdentification(object):
                     return None
         except Exception as e:
             self.logger.error('The error: {}'.format(e))
-            assert True, 'The error: {}'.format(e)
+            assert False, 'The error: {}'.format(e)
         result = response.content.decode()
         result = json.loads(result)
         try:
